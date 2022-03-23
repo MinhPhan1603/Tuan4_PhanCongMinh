@@ -11,8 +11,8 @@ namespace Tuan4_PhanCongMinh.Models
 
         public class GioHang
         {
-            MydataDataContext data = new MydataDataContext();
-            public int masach { get; set; }
+        DataClasses1DataContext data = new DataClasses1DataContext();
+        public int masach { get; set; }
             [Display(Name = "Tên sách")]
 
             public string tensach { get; set; }

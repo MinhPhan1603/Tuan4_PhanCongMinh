@@ -10,7 +10,7 @@ namespace Tuan4_PhanCongMinh.Controllers
     public class SachController : Controller
     {
         // GET: Sach
-        MydataDataContext data = new MydataDataContext();
+        DataClasses1DataContext data = new DataClasses1DataContext();
         public ActionResult ListSach()
         {
             var all_sach = from ss in data.Saches select ss;
@@ -43,7 +43,7 @@ namespace Tuan4_PhanCongMinh.Controllers
             s.ngaycapnhat = E_ngaycapnhat;
             s.soluongton = E_soluongton;
             data.Saches.InsertOnSubmit(s);
-            data.SubmitChanges();
+                data.SubmitChanges();
             return RedirectToAction("ListSach");
         }
         return this.Create();
